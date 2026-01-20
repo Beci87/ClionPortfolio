@@ -343,6 +343,13 @@ body {
 
 .about-img{
     position: relative;
+    width: 25rem;
+    height: 25rem;
+    background: #081b29;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
