@@ -412,6 +412,11 @@ span {
 
 
 }
+.education-column {
+    padding-left: 2rem;
+}
+
+
 .education .education-row{
     display: flex;
     flex-wrap: wrap;
