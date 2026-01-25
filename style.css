@@ -26,9 +26,10 @@ body {
     transition: .3s;
 
 }
-.header .sticky{
-    background: yellowgreen;
+.header.sticky {
+    background: #081b29;
 }
+
 
 .logo {
     position: relative;
@@ -292,25 +293,25 @@ body {
 .home-sci a:hover::before{
     width: 100%;
 
-}
+/*}*/
 
-.home-imgHover{
-    position: absolute;
-    top: 0;
-    right: 30px;
-    width: 500px;
-    height: 100%;
-    background: transparent;
-    transition: 3s;
-    animation: manipActiveHover .1s forwards;
-    animation-delay: 4s;
-    pointer-events: none;
+/*.home-imgHover{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 30px;*/
+/*    width: 500px;*/
+/*    height: 100%;*/
+/*    background: transparent;*/
+/*    transition: 3s;*/
+/*    animation: manipActiveHover .1s forwards;*/
+/*    animation-delay: 4s;*/
+/*    pointer-events: none;*/
 
-}
+/*}*/
 
-.home-imgHover:hover{
-    background: #00abf0;
-    opacity: .8;
+/*.home-imgHover:hover{*/
+/*    background: #00abf0;*/
+/*    opacity: .8;*/
 
 }
 .home-imgHover::after {
@@ -802,6 +803,22 @@ form .btn-box.btns > button.btn:hover {
 .footer-iconTop a:hover i{
     color: #00abf0;
 
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header{
+        padding: 2rem 4%;
+
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
 }
 
 
