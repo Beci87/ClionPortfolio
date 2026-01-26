@@ -1,4 +1,13 @@
 
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('fa-bars');
+    menuIcon.classList.toggle('fa-xmark');
+    navbar.classList.toggle('active');
+}
+
 
 
 let section = document.querySelectorAll('section');
@@ -22,4 +31,12 @@ window.onscroll = () => {
     const header = document.querySelector("header");
 
     header.classList.toggle('sticky', window.scrollY > 100);
+
+
+    menuIcon.classList.remove('fa-bars');
+    menuIcon.classList.add('fa-xmark');
+    menuIcon.classList.remove('fa-xmark');
+    menuIcon.classList.add('fa-bars');
+    navbar.classList.remove('active');
+
 }
