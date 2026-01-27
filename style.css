@@ -352,7 +352,9 @@ span {
 
 .about-img{
     position: relative;
-    width: 30rem;
+    width: 100%;
+    max-width: 30rem;
+    aspect-ratio: 1/1;
     height: 30rem;
     background: #081b29;
     border-radius: 50%;
@@ -364,6 +366,8 @@ span {
 
 .about-img img{
     width: 95%;
+    height: 95%;
+    object-fit: cover;
     border-radius: 50%;
     border: .2rem solid #00abf0;
 
@@ -377,10 +381,10 @@ span {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border-top: .2rem solid #081b29;
-    border-right: .2rem solid #00abf0;
-    border-left: .2rem solid #00abf0;
-    border-bottom: .2rem solid #081b29;
+    /*border-top: .2rem solid #081b29;*/
+    /*border-right: .2rem solid #00abf0;*/
+    /*border-left: .2rem solid #00abf0;*/
+    /*border-bottom: .2rem solid #081b29;*/
 
 }
 
@@ -831,6 +835,9 @@ form .btn-box.btns > button.btn:hover {
 @media (max-width: 768px) {
     .header{
         background: #081b29;
+    }
+    .about-img{
+        max-width: 20rem;
     }
 
     #menu-icon{
