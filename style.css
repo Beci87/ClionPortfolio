@@ -75,9 +75,9 @@ body {
 }
 
 .home{
-    /*background: url('home.jpg.jpg') no-repeat;*/
-    /*background-size: cover;*/
-    /*background-position: block-end;*/
+    background: url('focis.jpg') no-repeat;
+    background-size: 40%;
+    background-position: right center;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -89,6 +89,7 @@ body {
 
 .home-content{
     max-width: 600px;
+    z-index: 99;
 }
 
 .home-content h1 {
@@ -293,25 +294,27 @@ body {
 .home-sci a:hover::before{
     width: 100%;
 
-/*}*/
+}
 
-/*.home-imgHover{*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    right: 30px;*/
-/*    width: 500px;*/
-/*    height: 100%;*/
-/*    background: transparent;*/
-/*    transition: 3s;*/
-/*    animation: manipActiveHover .1s forwards;*/
-/*    animation-delay: 4s;*/
-/*    pointer-events: none;*/
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
 
-/*}*/
 
-/*.home-imgHover:hover{*/
-/*    background: #00abf0;*/
-/*    opacity: .8;*/
+}
+
+.home-imgHover:hover{
+    background: #081b29;
+    opacity: .8;
+    width: 600px;
 
 }
 .home-imgHover::after {
@@ -322,6 +325,7 @@ body {
     width: 120%;
     height: 100%;
     background: #00abf0;
+    opacity: .4;
     animation: showRight 1s ease forwards;
     animation-delay: 3s;
     z-index: 100;
@@ -400,6 +404,7 @@ span {
 .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    line-height: .4;
 }
 
 .btn-box.btns{
@@ -833,36 +838,38 @@ form .btn-box.btns > button.btn:hover {
 }
 
 @media (max-width: 768px) {
-    .header{
+    .header {
         background: #081b29;
     }
-    .about-img{
+
+    .about-img {
         max-width: 20rem;
     }
 
-    #menu-icon{
+    #menu-icon {
         display: block;
     }
 
-    .navbar{
+
+    .navbar {
         position: absolute;
         top: 100%;
         left: -100%;
         width: 100%;
         padding: 1rem 4%;
         background: #00c6ff;
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         z-index: 1;
         transition: .25s ease;
         transition-delay: .25s;
     }
 
-    .navbar.active{
+    .navbar.active {
         left: 0;
         transition-delay: 0s;
     }
 
-    .navbar .active-nav{
+    .navbar .active-nav {
         position: absolute;
         top: 0;
         left: -100%;
@@ -876,7 +883,7 @@ form .btn-box.btns > button.btn:hover {
 
     }
 
-    .navbar.active .active-nav{
+    .navbar.active .active-nav {
         left: 0;
         transition-delay: .25s;
 
@@ -892,18 +899,65 @@ form .btn-box.btns > button.btn:hover {
 
     }
 
-    .navbar.active a{
+    .navbar.active a {
         transform: translateX(0);
         transition-delay: .25s;
 
 
     }
 
+    .home-imgHover {
+        pointer-events: none;
+        background: #081b29;
+        opacity: 0.6;
+    }
+}
 
+@media (max-width: 520px) {
+    html{
+        font-size: 50%;
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-sci{
+        width: 160px;
+
+    }
+
+    .home-sci a{
+        width: 38px;
+        height: 38px;
+    }
 
 }
 
+@media (max-width: 462px) {
+    .home-content h1{
+        font-size: 5.2rem;
+    }
 
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+
+    .contact form .input-box .input-field {
+        width: 100%;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+
+    }
+
+    .footer p{
+        margin-top: 2rem;
+    }
+
+}
 
 @keyframes showRight {
     100%{
@@ -912,10 +966,10 @@ form .btn-box.btns > button.btn:hover {
     }
     
 }
+
 @keyframes manipActiveHover {
     100% {
         pointer-events: auto;
 
     }
-    
 }
