@@ -95,6 +95,7 @@ body {
 .home-content{
     max-width: 600px;
     z-index: 99;
+
 }
 
 .home-content h1 {
@@ -103,6 +104,7 @@ body {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+
 }
 .home-content h1 span{
     color: #00abf0;
@@ -121,7 +123,9 @@ body {
     background-image: linear-gradient(#00abf0, #00abf0);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: 0 0;
+    background-position: -33rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content .text-animate h3::before{
@@ -133,6 +137,8 @@ body {
     height: 100%;
     border-right: 2px solid #00abf0;
     z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home-content h1::before {
@@ -170,6 +176,7 @@ body {
     font-size: 16px;
     margin: 20px 0 40px;
     line-height: 1.6;
+
 }
 .home-content p::before {
     content: '';
@@ -343,10 +350,12 @@ body {
 
 }
 
+
+
 .home-imgHover:hover{
     background: #081b29;
     opacity: .8;
-    width: 600px;
+    width: 720px;
 
 }
 .home-imgHover::after {
@@ -370,15 +379,16 @@ body {
     flex-direction: column;
     gap: 2rem;
     padding-bottom: 6rem;
-    background-color: #081b29;
+    background-color: #112e42;
 
 }
 
-.heading{
-    font-size: 4rem;
+.heading {
+    position: relative;
+    font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
-    background: #081b29;
+    background: #112e42;
 }
 
 span {
@@ -429,15 +439,18 @@ span {
     text-align: center;
 }
 
-.about-content h3{
+.about-content h3 {
+    position: relative;
+    display: inline-block;
     font-size: 2.6rem;
 
 }
 
 .about-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    line-height: .4;
+    /*line-height: .4;*/
 }
 
 .btn-box.btns{
@@ -446,6 +459,7 @@ span {
 
 }
 .btn-box.btns a::before{
+    color: #081b29;
 
 }
 .education{
@@ -458,6 +472,7 @@ span {
 
 
 }
+
 .education-column {
     padding-left: 2rem;
 }
@@ -516,7 +531,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: #00abf0;
+    background: #112e42;
     z-index: -1;
     transition: 0.5s;
 
@@ -530,7 +545,7 @@ span {
 .education-content .content .year{
     font-size: 1.5rem;
     color: #00abf0;
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem;
 
 }
 .education-content .content .year i{
@@ -542,7 +557,7 @@ span {
 
 }
 .education-content .content p{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding-top: .5rem;
 
 }
@@ -855,15 +870,36 @@ form .btn-box.btns > button.btn:hover {
     height: 100%;
     background: #00abf0;
     z-index: 98;
+
 }
+
+.animate.home-img {
+    width: 100%;
+
+}
+
 
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
-.home.show-animate .animate{
+.home.show-animate .animate {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
+
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+
+}
+
+.about.show-animate .animate.scroll {
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+
+}
+
 
 @media (max-width: 1200px) {
     html {
@@ -1054,5 +1090,31 @@ form .btn-box.btns > button.btn:hover {
     100% {
         width: 0;
 
+    }
+}
+
+@keyframes homeBgText{
+    0%, 10%, 100% {
+        background-position: -33rem 0;
+    }
+
+    65%, 85% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText{
+    0%, 10%, 100% {
+        width: 0;
+    }
+
+    65%, 78%, 85% {
+        width: 100%;
+        opacity: 1;
+
+    }
+
+    75%, 81% {
+        opacity: 0;
     }
 }
