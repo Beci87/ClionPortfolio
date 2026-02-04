@@ -565,7 +565,7 @@ span {
 .skills{
     min-height: auto;
     padding-bottom: 7rem;
-    background: #00abf0;
+    background: #112e42;
 }
 .skills .skills-row{
     display: flex;
@@ -599,7 +599,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: #073b7c;
+    background: #081b29;
     z-index: -1;
     transition: 0.5s;
 }
@@ -693,7 +693,7 @@ span {
     height: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: #00abf0;
+    color: #112e42;
     background: transparent;
     border-radius: .6rem;
     border: .2rem solid #00abf0;
@@ -701,7 +701,7 @@ span {
 
 .contact form .input-box .input-field input::placeholder,
 .contact form .textarea-field textarea::placeholder{
-    color: aliceblue;
+    color: #112e42;
 }
 .contact form .input-field,
 .contact form .textarea-field{
