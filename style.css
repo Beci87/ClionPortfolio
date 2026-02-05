@@ -10,8 +10,12 @@ body {
 
     color: #ededed;
 
-
 }
+section {
+    scroll-margin-top: 60px; /* a fix fejléc magassága */
+}
+
+
 .header {
     position: fixed;
     top: 0;
@@ -101,13 +105,13 @@ body {
 .home-content h1 {
     position: relative;
     display: inline-block;
-    font-size: 56px;
+    font-size: 65px;
     font-weight: 700;
     line-height: 1.2;
 
 }
 .home-content h1 span{
-    color: #00abf0;
+    color: #ededed;
 }
 
 .home-content .text-animate{
@@ -763,6 +767,8 @@ span {
     display: flex;
 
 }
+
+
 
 .contact form .textarea-field textarea{
     resize: none;
