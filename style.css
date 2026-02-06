@@ -78,7 +78,7 @@ section {
 #menu-icon{
     position: relative;
     font-size: 3.6rem;
-    color: #00abf0;
+    color: #ededed;
     cursor: pointer;
     display: none;
 }
@@ -880,7 +880,7 @@ form .btn-box.btns > button.btn:hover {
 }
 
 .animate.home-img {
-    width: 100%;
+    width: 50%;
 
 }
 
