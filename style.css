@@ -2,8 +2,17 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+border: none;
+text-decoration: none;
+outline: none;
+scroll-behavior: smooth;
 font-family: 'Poppins', sans-serif;
 
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
@@ -128,11 +137,16 @@ section {
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-position: -33rem 0;
-    animation: homeBgText 6s linear infinite;
-    animation-delay: 2s;
+
 }
 
-.home-content .text-animate h3::before{
+.home.show-animate .home-content .text-animate h3 {
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+
+}
+
+.home-content .text-animate h3::before {
     content: '';
     position: absolute;
     top: 0;
@@ -141,6 +155,10 @@ section {
     height: 100%;
     border-right: 2px solid #00abf0;
     z-index: -1;
+
+}
+
+.home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
     animation-delay: 2s;
 }
@@ -493,11 +511,14 @@ span {
     flex:  1 1 40rem;
 }
 .education-column .title{
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem 2rem;
 
 }
 .education-column .education-box{
+    position: relative;
     border-left: #00abf0 solid .2rem;
 
 }
@@ -571,6 +592,12 @@ span {
     padding-bottom: 7rem;
     background: #112e42;
 }
+
+.skills h2{
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .skills .skills-row{
     display: flex;
     flex-wrap: wrap;
@@ -583,8 +610,14 @@ span {
 
 }
 .skills-column .title{
+    position: relative;
+    display: inline-block;
     font-size: 2.5rem;
     margin: 0 0 1.5rem;
+}
+
+.skills-column .skills-box {
+    position: relative;
 }
 
 .skills-box .skills-content{
@@ -669,6 +702,12 @@ span {
 .contact{
     min-height: auto;
     padding-bottom: 7rem;
+}
+
+.contact h2{
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .contact form{
@@ -818,9 +857,9 @@ form .btn-box.btns > button.btn:hover {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: #00abf0;
-
+    background: #112e42;
 }
+
 
 .footer-text p{
     font-size: 1.6rem;
@@ -874,7 +913,7 @@ form .btn-box.btns > button.btn:hover {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #00abf0;
+    background: #081b29;
     z-index: 98;
 
 }
@@ -897,10 +936,23 @@ form .btn-box.btns > button.btn:hover {
     transition: 1s ease;
     transition-delay: calc(.3s / var(--i));
     animation: none;
+}
+
+section:nth-child(odd) .animate.scroll,
+.footer .animate.scroll {
+    background: #112e42;
+}
+
+.education .education-box .animate.scroll {
+    width: 105%;
 
 }
 
-.about.show-animate .animate.scroll {
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll,
+.footer.show-animate .animate.scroll{
     transition-delay: calc(.3s * var(--i));
     width: 0;
 
@@ -928,6 +980,12 @@ form .btn-box.btns > button.btn:hover {
         padding: 2rem 4%;
     }
 
+}
+
+@media (max-width: 850px) {
+    .animate .home-img {
+        width: 55%;
+    }
 }
 
 @media (max-width: 768px) {

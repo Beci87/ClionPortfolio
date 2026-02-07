@@ -43,4 +43,7 @@ window.onscroll = () => {
     menuIcon.classList.add('fa-bars');
     navbar.classList.remove('active');
 
+
+
+
 }
